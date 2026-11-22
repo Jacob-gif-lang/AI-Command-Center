@@ -241,6 +241,12 @@
     '保存失败：': 'Save failed: ', '正在提交…': 'Sending…', '已发送到': 'Sent to',
     '已打开邮件客户端，收件人：': 'Mail client opened, recipient: ', '发送失败：': 'Send failed: ',
     '反馈内容已复制，可手动粘贴到邮件': 'Feedback copied; paste it into an email', '复制失败：': 'Copy failed: ',
+    '功能建议': 'Feature', '界面外观': 'Appearance', '体验问题': 'User experience', '错误报告': 'Bug report',
+    '提案': 'Proposals', '总票数': 'Total votes', '建议': 'Suggestions', '已发送': 'Sent',
+    '支持 +1': 'Support +1', '撤回 -1': 'Withdraw -1', '删除': 'Delete', '标记已发送': 'Mark as sent',
+    '确认删除这条建议？': 'Delete this suggestion?', '已删除建议': 'Suggestion deleted',
+    '操作失败：': 'Operation failed: ', '你已经支持过这项提案': 'You already supported this proposal',
+    '你还没有支持这项提案': 'You have not supported this proposal',
 
     // 设置
     '启动时自动识别': 'Detect on startup', '每次打开都重新扫描本机 AI，并写回配置': 'Rescan local AI every launch and write back config',

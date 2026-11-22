@@ -1,8 +1,8 @@
 {
   "name": "nexus-ai-orchestrator",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "NEXUS — Windows 本机 AI 编排中枢（桌面初版）",
-  "homepage": "https://nexus-official.app.workbuddy.host/?sharecode=HDR676KA2G",
+  "homepage": "https://ai-command-center.tianjinkang0130.workers.dev/",
   "main": "electron/main.js",
   "bin": {
     "nexus": "bin/nexus.js"
@@ -14,8 +14,15 @@
     "electron/",
     "docs/",
     "README.md",
-    "package.json"
+    "package.json",
+    "!node_modules/**",
+    "!.git.local-backup/**",
+    "!.git/**",
+    "!build/**",
+    "!dist/**"
   ],
+  "asar": true,
+  "npmRebuild": false,
   "scripts": {
     "start": "electron .",
     "dev": "electron . --dev",
@@ -40,63 +47,5 @@
   "license": "MIT",
   "engines": {
     "node": ">=20"
-  },
-  "devDependencies": {
-    "electron": "^33.0.0",
-    "electron-builder": "^26.18.0"
-  },
-  "build": {
-    "appId": "com.jacob.nexus",
-    "productName": "NEXUS",
-    "copyright": "Copyright © 2026 Jacob",
-    "directories": {
-      "output": "dist",
-      "buildResources": "build"
-    },
-    "files": [
-      "electron/**",
-      "server/**",
-      "renderer/**",
-      "docs/**",
-      "package.json"
-    ],
-    "asar": true,
-    "compression": "normal",
-    "win": {
-      "target": [
-        { "target": "portable", "arch": ["x64"] },
-        { "target": "nsis", "arch": ["x64"] }
-      ],
-      "icon": "build/icon.ico",
-      "artifactName": "${productName}-${version}-${arch}.${ext}",
-      "requestedExecutionLevel": "asInvoker"
-    },
-    "mac": {
-      "target": [
-        { "target": "zip", "arch": ["x64", "arm64"] }
-      ],
-      "icon": "build/icon.png",
-      "artifactName": "${productName}-${version}-${arch}.${ext}",
-      "identity": null
-    },
-    "linux": {
-      "target": [
-        { "target": "AppImage", "arch": ["x64"] },
-        { "target": "deb", "arch": ["x64"] }
-      ],
-      "icon": "build/icon.png",
-      "artifactName": "${productName}-${version}-${arch}.${ext}",
-      "category": "Utility"
-    },
-    "portable": {
-      "artifactName": "NEXUS-Portable-${version}.exe",
-      "requestExecutionLevel": "user"
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": true,
-      "shortcutName": "NEXUS"
-    }
   }
 }

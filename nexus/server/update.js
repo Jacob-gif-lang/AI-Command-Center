@@ -18,7 +18,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
 
-const DEFAULT_FEED = 'https://nexus-official.app.workbuddy.host/version.json?sharecode=HDR676KA2G';
+const DEFAULT_FEED = 'https://ai-command-center.tianjinkang0130.workers.dev/version.json';
 const CACHE_MS = 10 * 60 * 1000;
 const FETCH_TIMEOUT_MS = 12000;
 const DOWNLOAD_TIMEOUT_MS = 10 * 60 * 1000;

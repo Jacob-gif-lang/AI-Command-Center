@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nexus-official.app.workbuddy.host/sitemap.xml
+Sitemap: https://ai-command-center.tianjinkang0130.workers.dev/sitemap.xml

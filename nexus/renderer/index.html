@@ -452,14 +452,24 @@
             </div>
           </header>
 
+          <div class="fb-stats" id="feedbackStats">
+            <div class="fb-stat"><b id="fbStatIdeas">0</b><span>提案</span></div>
+            <div class="fb-stat"><b id="fbStatVotes">0</b><span>总票数</span></div>
+            <div class="fb-stat"><b id="fbStatSuggestions">0</b><span>建议</span></div>
+            <div class="fb-stat"><b id="fbStatSent">0</b><span>已发送</span></div>
+            <div class="fb-env" id="feedbackEnv">版本 0.7.2</div>
+          </div>
+
           <div class="section-head"><h3>功能投票</h3><span class="section-hint">点 ▲ 支持、▼ 撤回，按票数实时排序</span></div>
           <div class="idea-list" id="ideaList"></div>
 
           <form class="fb-inline-form" id="ideaForm">
             <input type="text" id="ideaTitle" placeholder="输入你想要的新功能，例如：支持多窗口并排" maxlength="120">
             <select id="ideaCategory">
-              <option value="feature">功能</option>
-              <option value="appearance">外观样貌</option>
+              <option value="feature">功能建议</option>
+              <option value="appearance">界面外观</option>
+              <option value="ux">体验问题</option>
+              <option value="bug">错误报告</option>
             </select>
             <button class="btn-accent" type="submit">加入投票</button>
           </form>
@@ -468,8 +478,10 @@
           <form class="fb-form" id="suggestionForm">
             <div class="fb-form-row">
               <select id="suggestionCategory">
-                <option value="appearance">外观样貌</option>
-                <option value="feature">功能</option>
+                <option value="feature">功能建议</option>
+                <option value="appearance">界面外观</option>
+                <option value="ux">体验问题</option>
+                <option value="bug">错误报告</option>
               </select>
               <input type="text" id="suggestionContact" placeholder="联系方式（可选，如邮箱/QQ）" maxlength="120">
             </div>
@@ -486,6 +498,7 @@
               <span>未配置发信邮箱时，会自动打开本机邮件客户端并填好内容；配置了 SMTP 则直接发出。</span>
             </div>
             <button class="btn-ghost" id="feedbackCopyBtn">复制内容</button>
+            <button class="btn-ghost" id="feedbackMarkSentBtn">标记已发送</button>
             <button class="btn-accent" id="feedbackSendBtn">发送到邮箱</button>
           </div>
         </div>

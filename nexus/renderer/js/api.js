@@ -357,6 +357,14 @@
       requireLive('提交建议');
       return postJson('/api/feedback/suggest', payload);
     },
+    deleteSuggestion(id) {
+      requireLive('删除建议');
+      return postJson('/api/feedback/suggest/remove', { id });
+    },
+    markFeedbackSent(payload) {
+      requireLive('标记已发送');
+      return postJson('/api/feedback/mark-sent', payload || {});
+    },
     getMailto(subject) {
       requireLive('生成邮件');
       return jsonFetch('/api/feedback/mailto' + (subject ? '?subject=' + encodeURIComponent(subject) : ''));

@@ -1,10 +1,12 @@
 {
   "schema": 1,
-  "latest": "0.7.1",
-  "releasedAt": "2026-11-22T03:44:04.807Z",
+  "latest": "0.7.2",
+  "releasedAt": "2026-11-22T13:09:41.202Z",
   "channel": "stable",
   "notes": [
-    "新增「检查更新」按钮：设置页与帮助菜单均可检查官网新版本并一键下载安装包",
+    "用户反馈中心全面升级：四类反馈分类（功能/外观/体验/错误）、功能投票防刷、建议草稿保存与删除、统计卡片与环境信息、一键标记已发送",
+    "中英文一键切换，全部界面文字同步翻译并持久化",
+    "软件内「检查更新」按钮：设置页与帮助菜单均可检查官网新版本并一键下载安装包",
     "全盘识别本机模型：可找出被环境变量重定向或未启动的 Ollama / GGUF 模型",
     "DeepSeek 式深度思考：可折叠思维链实时展示，思考完自动收起",
     "一键停止输出与思考：生成中按停止或 Esc，正文与思维链同时中断",
@@ -12,39 +14,39 @@
   ],
   "packages": {
     "windows-x64": {
-      "file": "NEXUS-0.7.1-x64.exe",
-      "size": 87714178,
-      "sha256": "c565e349473c39d984429a149e6776e17af9c7b558b39175f5c4def81839ef6a",
+      "file": "NEXUS-0.7.2-x64.exe",
+      "size": 87780829,
+      "sha256": "14920d50a42228e43ebdade7ddc5996ebddf763bd7b68a02c057a04cd88c03a2",
       "kind": "nsis"
     },
     "windows-x64-portable": {
-      "file": "NEXUS-Portable-0.7.1.exe",
-      "size": 80443728,
-      "sha256": "c6b1eec418ef5d38675c2e00a8bab2ca97b0d26ea5db75ad998cb0f2d4b68ea6",
+      "file": "NEXUS-Portable-0.7.2.exe",
+      "size": 80575418,
+      "sha256": "f982e31f3bc9c98fab3628178a80cfd6a41d4e8aa6c4953549d00218ab3b931c",
       "kind": "portable"
     },
     "macos-x64": {
-      "file": "NEXUS-0.7.1-x64.zip",
-      "size": 103279189,
-      "sha256": "5f0717a0839143ea9d78a07f8cbd87d2388fa97e1bd3b541b86d0db42948cbd7",
+      "file": "NEXUS-0.7.2-x64.zip",
+      "size": 103300532,
+      "sha256": "a8ae9c4f6f0f5ae67bdff3a4ab4fd52729404277f5b2e144c9ccc04b5e57873c",
       "kind": "zip"
     },
     "macos-arm64": {
-      "file": "NEXUS-0.7.1-arm64.zip",
-      "size": 98554391,
-      "sha256": "eb7c85fa287c0f529358e10273575ac666ee3761687c27b519e20d79b076bd25",
+      "file": "NEXUS-0.7.2-arm64.zip",
+      "size": 98575734,
+      "sha256": "c41a1ffcd05e2a17d228e74f30dea00f473f65d79d0d6b35c7b8478079193ba1",
       "kind": "zip"
     },
     "linux-x64": {
-      "file": "NEXUS-0.7.1-x64.deb",
-      "size": 108342958,
-      "sha256": "f07bbbef6f0ef513f177404bb4b3c6aa78ae1cc0a6aebeb8826772ca82842d69",
+      "file": "NEXUS-0.7.2-x64.deb",
+      "size": 108514668,
+      "sha256": "99f8e4ab6e647aeb4662c99e9b9f64e3c7ab9e24ae8a602c04e4606c5905012c",
       "kind": "deb"
     },
     "linux-x64-targz": {
-      "file": "NEXUS-0.7.1-x64-linux.tar.gz",
-      "size": 108338723,
-      "sha256": "7631dc04a1ab9f62a7567bb8f6fa16dadededebf44caaa6d30d2f12bd2497d2b",
+      "file": "NEXUS-0.7.2-x64-linux.tar.gz",
+      "size": 108510392,
+      "sha256": "579f8b3d88cbc141f50cd69ee8708a380a15e996640fe72ce32e1bce7cb01e8d",
       "kind": "targz"
     }
   }

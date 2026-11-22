@@ -42,7 +42,7 @@ nexus --version
 
 ### 三平台安装包
 
-官网 <https://nexus-official.app.workbuddy.host/?sharecode=HDR676KA2G> 的「下载安装」区提供三个平台的安装包：
+官网 <https://ai-command-center.tianjinkang0130.workers.dev/> 的「下载安装」区提供三个平台的安装包：
 
 | 平台 | 文件 | 构建命令 | 安装方式 |
 | --- | --- | --- | --- |

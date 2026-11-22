@@ -30,7 +30,7 @@ const feedback = require('./feedback');
 const smtp = require('./smtp');
 const update = require('./update');
 
-const APP_VERSION = '0.7.1';
+const APP_VERSION = '0.7.2';
 const RENDERER_DIR = path.join(__dirname, '..', 'renderer');
 const STARTED_AT = Date.now();
 
@@ -632,9 +632,9 @@ async function route(req, res) {
   }
   if (pathname === '/api/feedback/vote' && req.method === 'POST') {
     const body = await readBody(req).catch(() => ({}));
-    const idea = feedback.vote(body.id, body.delta);
-    if (!idea) return sendJson(res, 404, { error: 'idea_not_found' });
-    return sendJson(res, 200, { ok: true, idea });
+    const result = feedback.vote(body.id, body.delta);
+    if (!result) return sendJson(res, 404, { error: 'idea_not_found' });
+    return sendJson(res, 200, Object.assign({ ok: true }, result));
   }
   if (pathname === '/api/feedback/idea' && req.method === 'POST') {
     const body = await readBody(req).catch(() => ({}));
@@ -647,6 +647,16 @@ async function route(req, res) {
     const item = feedback.addSuggestion(body);
     if (!item) return sendJson(res, 400, { error: 'invalid_text' });
     return sendJson(res, 200, { ok: true, item });
+  }
+  if (pathname === '/api/feedback/suggest/remove' && req.method === 'POST') {
+    const body = await readBody(req).catch(() => ({}));
+    const ok = feedback.removeSuggestion(body.id);
+    if (!ok) return sendJson(res, 404, { error: 'suggestion_not_found' });
+    return sendJson(res, 200, { ok: true });
+  }
+  if (pathname === '/api/feedback/mark-sent' && req.method === 'POST') {
+    const body = await readBody(req).catch(() => ({}));
+    return sendJson(res, 200, feedback.markSent(body));
   }
   if (pathname === '/api/feedback/mailto' && req.method === 'GET') {
     const subject = searchParams.get('subject') || 'NEXUS 用户优化反馈';

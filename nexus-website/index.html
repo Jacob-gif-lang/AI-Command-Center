@@ -26,7 +26,7 @@
     "description": "免费开源的本机 AI 工作台，自动识别并统一管理本地与云端 AI，支持 AI 群聊、深度思考、全盘模型识别与一键自愈。",
     "applicationCategory": "ProductivityApplication",
     "operatingSystem": "Windows 10, Windows 11, macOS, Linux",
-    "softwareVersion": "0.7.1",
+    "softwareVersion": "0.7.2",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
     "author": { "@type": "Person", "name": "田锦康" },
     "copyrightHolder": { "@type": "Person", "name": "田锦康" },
@@ -63,7 +63,7 @@
     <section class="hero" id="home">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow"><span class="dot"></span> 免费开源 AI 工作台 · Windows 10 / 11 · v0.7.1 现已发布</div>
+          <div class="eyebrow"><span class="dot"></span> 免费开源 AI 工作台 · Windows 10 / 11 · v0.7.2 现已发布</div>
           <h1>把电脑里所有的 AI<br /><span class="gradient-text">收进一个 AI 工作台</span></h1>
           <p class="hero-lead">
             NEXUS 是面向 Windows 与 macOS 的桌面 AI 工作台：启动即自动发现本机推理引擎、宿主应用、MCP 工具与云端凭据通道。
@@ -136,8 +136,8 @@
           <div><strong>所有人都可下载</strong><span>完全免费 · 无需注册 · 无需登录 · 不限地区 · 不限设备，点开即可下载安装。</span></div>
         </div>
         <div class="release-note reveal">
-          <span class="release-tag">v0.7.1 新版本</span>
-          <span>软件内新增「检查更新」按钮，一键下载对应平台安装包 · 全盘识别本机模型 · DeepSeek 式深度思考 · 一键停止输出与思考 · MCP 工具与模型分区展示。所有平台安装包均已同步更新。</span>
+          <span class="release-tag">v0.7.2 新版本</span>
+          <span>用户反馈中心全面升级：四类反馈分类、功能投票防刷、建议草稿保存与删除、统计卡片与环境信息、一键标记已发送 · 软件内新增「检查更新」按钮 · 全盘识别本机模型 · DeepSeek 式深度思考 · 一键停止输出与思考 · 中英文一键切换。所有平台安装包均已同步更新。</span>
         </div>
         <div class="download-grid">
           <article class="download-card reveal">
@@ -145,8 +145,8 @@
             <h3>Windows</h3>
             <p class="os-meta">Windows 10 / 11 · 64 位</p>
             <div class="dl-links">
-              <a class="dl-btn primary" href="downloads/NEXUS-0.7.1-x64.exe" download>安装版 .exe <span>↓</span></a>
-              <a class="dl-btn" href="downloads/NEXUS-Portable-0.7.1.exe" download>便携版 .exe <span>↓</span></a>
+              <a class="dl-btn primary" href="downloads/NEXUS-0.7.2-x64.exe" download>安装版 .exe <span>↓</span></a>
+              <a class="dl-btn" href="downloads/NEXUS-Portable-0.7.2.exe" download>便携版 .exe <span>↓</span></a>
             </div>
             <p class="dl-note">安装版写入开始菜单；便携版解压即用、不写注册表。</p>
           </article>
@@ -155,8 +155,8 @@
             <h3>macOS</h3>
             <p class="os-meta">macOS 12+ · Intel / Apple Silicon</p>
             <div class="dl-links">
-              <a class="dl-btn primary" href="downloads/NEXUS-0.7.1-arm64.zip" download>Apple Silicon .zip <span>↓</span></a>
-              <a class="dl-btn" href="downloads/NEXUS-0.7.1-x64.zip" download>Intel .zip <span>↓</span></a>
+              <a class="dl-btn primary" href="downloads/NEXUS-0.7.2-arm64.zip" download>Apple Silicon .zip <span>↓</span></a>
+              <a class="dl-btn" href="downloads/NEXUS-0.7.2-x64.zip" download>Intel .zip <span>↓</span></a>
             </div>
             <p class="dl-note">解压后把 NEXUS.app 拖入「应用程序」；首次打开需在「系统设置 → 隐私与安全性」中允许。</p>
           </article>
@@ -165,8 +165,8 @@
             <h3>Linux</h3>
             <p class="os-meta">x86_64 · tar.gz / deb</p>
             <div class="dl-links">
-              <a class="dl-btn primary" href="downloads/NEXUS-0.7.1-x64-linux.tar.gz" download>tar.gz 免安装 <span>↓</span></a>
-              <a class="dl-btn" href="downloads/NEXUS-0.7.1-x64.deb" download>deb 安装包 <span>↓</span></a>
+              <a class="dl-btn primary" href="downloads/NEXUS-0.7.2-x64-linux.tar.gz" download>tar.gz 免安装 <span>↓</span></a>
+              <a class="dl-btn" href="downloads/NEXUS-0.7.2-x64.deb" download>deb 安装包 <span>↓</span></a>
             </div>
             <p class="dl-note">tar.gz 解压后直接运行 <code>./nexus-ai-orchestrator</code>（已带可执行权限）；deb 用 <code>sudo dpkg -i</code> 安装后运行 <code>nexus</code>。</p>
           </article>
@@ -335,7 +335,7 @@ npm start</code></pre>
           <div class="code-card reveal">
             <div class="code-head"><span>方式三 · 打包单文件 exe</span><button class="copy-btn" data-copy="npm run dist:portable">复制</button></div>
             <pre><code>npm run dist:portable</code></pre>
-            <p>输出 <code>dist/NEXUS-Portable-0.7.1.exe</code></p>
+            <p>输出 <code>dist/NEXUS-Portable-0.7.2.exe</code></p>
           </div>
         </div>
         <div class="cta-band reveal">
@@ -369,7 +369,7 @@ npm start</code></pre>
         <h2>让电脑里的 AI 真正一起干活</h2>
         <p>下载、配置、编排、排错，从今天开始少做重复的事。</p>
         <a class="btn btn-primary btn-lg" href="#quickstart">开始使用 NEXUS</a>
-        <span class="version">NEXUS v0.7.1 · Windows 10 / 11</span>
+        <span class="version">NEXUS v0.7.2 · Windows 10 / 11</span>
       </div>
     </section>
   </main>

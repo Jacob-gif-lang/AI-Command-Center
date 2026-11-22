@@ -44,3 +44,9 @@ Thumbs.db
 .env.*
 audio-state.json
 *.tmp
+
+# ===== 临时打包源目录与一次性脚本 =====
+.git.local-backup-nexus-offsite/
+nexus/build/asarsrc-*/
+nexus/build/make-asar-v072.js
+nexus/build/notes-v072.txt
