@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXUS - 免费 AI 工作台｜本机 AI 编排中枢（Windows/Mac/Linux）</title>
+  <meta name="description" content="NEXUS 是一款免费开源的 AI 工作台与本机 AI 编排中枢：自动识别并统一管理所有本地与云端 AI，支持 AI 群聊、深度思考、全盘模型识别与一键自愈。Windows / macOS / Linux 全平台可下载，零配置即可使用免费模型。" />
+  <meta name="keywords" content="AI工作台, AI 工作台, 本地AI, AI编排, 多AI群聊, AI助手桌面软件, Ollama, LM Studio, DeepSeek, 免费AI工具, AI agent 工作台" />
+  <meta name="author" content="田锦康" />
+  <meta name="copyright" content="© 2026 田锦康. NEXUS AI 工作台." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="NEXUS" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:title" content="NEXUS - 免费 AI 工作台｜本机 AI 编排中枢" />
+  <meta property="og:description" content="把电脑里所有 AI 收进一个入口：统一对话、AI 群聊、深度思考、全盘识别与一键自愈。全平台免费下载。" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="NEXUS - 免费 AI 工作台" />
+  <meta name="twitter:description" content="把电脑里所有 AI 收进一个入口的免费 AI 工作台，Windows / macOS / Linux 全平台可用。" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "NEXUS - AI 工作台",
+    "alternateName": "NEXUS 本机 AI 编排中枢",
+    "description": "免费开源的本机 AI 工作台，自动识别并统一管理本地与云端 AI，支持 AI 群聊、深度思考、全盘模型识别与一键自愈。",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "Windows 10, Windows 11, macOS, Linux",
+    "softwareVersion": "0.7.1",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
+    "author": { "@type": "Person", "name": "田锦康" },
+    "copyrightHolder": { "@type": "Person", "name": "田锦康" },
+    "featureList": "AI群聊, 深度思考, 全盘模型识别, 多AI编排, 一键自愈, 免费模型兜底"
+  }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%235b5bd6'/%3E%3Cpath d='M18 46V18h7l14 18V18h7v28h-7L25 28v18z' fill='white'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#home" aria-label="NEXUS 首页">
+        <span class="brand-mark">N</span>
+        <span class="brand-name">NEXUS</span>
+        <span class="brand-tag">本机 AI 编排中枢</span>
+      </a>
+      <nav class="site-nav" id="siteNav" aria-label="主导航">
+        <a href="#download">下载</a>
+        <a href="#features">核心能力</a>
+        <a href="#group">AI 群聊</a>
+        <a href="#repair">接入与自愈</a>
+        <a href="#quickstart">快速开始</a>
+        <a href="#security">安全</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="#quickstart">获取软件</a>
+      <button class="nav-toggle" id="navToggle" aria-label="展开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="dot"></span> 免费开源 AI 工作台 · Windows 10 / 11 · v0.7.1 现已发布</div>
+          <h1>把电脑里所有的 AI<br /><span class="gradient-text">收进一个 AI 工作台</span></h1>
+          <p class="hero-lead">
+            NEXUS 是面向 Windows 与 macOS 的桌面 AI 工作台：启动即自动发现本机推理引擎、宿主应用、MCP 工具与云端凭据通道。
+            统一对话、多人协作、流程编排，通道失效还能一键自愈。
+            没有配置任何模型？内置免费模型让你马上开始。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#download">立即下载 <span aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="#features">查看功能</a>
+          </div>
+          <ul class="hero-points">
+            <li class="open-point">所有人都可下载 · 免费使用</li>
+            <li>零配置可用 · 免费模型兜底</li>
+            <li>本地优先 · 省额度</li>
+            <li>数据留在你的电脑</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-label="NEXUS 界面示意">
+          <div class="app-window">
+            <div class="window-bar">
+              <span class="win-dot red"></span><span class="win-dot yellow"></span><span class="win-dot green"></span>
+              <span class="win-title">NEXUS</span>
+            </div>
+            <div class="window-body">
+              <aside class="mock-sidebar">
+                <div class="mock-search">⌕ 搜索通道</div>
+                <div class="mock-group-label">工作对象</div>
+                <div class="mock-node"><span class="node-icon local">O</span><span>Ollama · llama3</span><i class="online"></i></div>
+                <div class="mock-node"><span class="node-icon host">C</span><span>Claude Desktop</span><i class="online"></i></div>
+                <div class="mock-node"><span class="node-icon host">W</span><span>WorkBuddy</span><i class="online"></i></div>
+                <div class="mock-node"><span class="node-icon free">F</span><span>NEXUS 免费模型</span><i class="online"></i></div>
+                <div class="mock-node muted"><span class="node-icon mcp">M</span><span>filesystem · MCP</span><i></i></div>
+                <div class="mock-group-label">视图</div>
+                <div class="mock-view">◫ 群聊 · 3 位成员</div>
+                <div class="mock-view">◇ 编排画布</div>
+              </aside>
+              <div class="mock-main">
+                <div class="mock-top">自动路由 <span class="route-chip">本地 → 免费 → 按量</span></div>
+                <div class="mock-chat">
+                  <div class="bubble user">帮我分析这份日志，顺便让另一个 AI 复核</div>
+                  <div class="bubble ai"><span class="bubble-name">Ollama · llama3</span>已识别到 3 类异常，正在按时间线归并……</div>
+                  <div class="bubble ai"><span class="bubble-name">Claude Desktop 代答</span>复核完成，建议优先处理第一条连接池耗尽问题。</div>
+                </div>
+                <div class="mock-composer"><span>＋</span><span class="mock-input">说点什么……</span><span class="mock-send">发送</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="float-badge badge-one">群聊 · 智能分工</div>
+          <div class="float-badge badge-two">一键修复 ✓</div>
+        </div>
+      </div>
+      <div class="wrap stats-row">
+        <div class="stat"><strong>8+</strong><span>本地引擎自动识别</span></div>
+        <div class="stat"><strong>3</strong><span>群聊协作模式</span></div>
+        <div class="stat"><strong>11</strong><span>白名单 MCP 插件</span></div>
+        <div class="stat"><strong>0</strong><span>分钟起步配置</span></div>
+      </div>
+    </section>
+
+    <section class="section download-section" id="download">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">下载安装</span>
+          <h2>选一个平台，马上开始</h2>
+          <p>Windows 提供一键安装与免安装便携版；macOS 与 Linux 提供开源平台的标准安装包。所有安装只在你的设备上进行。</p>
+        </div>
+        <div class="download-banner reveal">
+          <span class="banner-check">✓</span>
+          <div><strong>所有人都可下载</strong><span>完全免费 · 无需注册 · 无需登录 · 不限地区 · 不限设备，点开即可下载安装。</span></div>
+        </div>
+        <div class="release-note reveal">
+          <span class="release-tag">v0.7.1 新版本</span>
+          <span>软件内新增「检查更新」按钮，一键下载对应平台安装包 · 全盘识别本机模型 · DeepSeek 式深度思考 · 一键停止输出与思考 · MCP 工具与模型分区展示。所有平台安装包均已同步更新。</span>
+        </div>
+        <div class="download-grid">
+          <article class="download-card reveal">
+            <div class="os-badge"><span class="os-glyph win">⊞</span></div>
+            <h3>Windows</h3>
+            <p class="os-meta">Windows 10 / 11 · 64 位</p>
+            <div class="dl-links">
+              <a class="dl-btn primary" href="downloads/NEXUS-0.7.1-x64.exe" download>安装版 .exe <span>↓</span></a>
+              <a class="dl-btn" href="downloads/NEXUS-Portable-0.7.1.exe" download>便携版 .exe <span>↓</span></a>
+            </div>
+            <p class="dl-note">安装版写入开始菜单；便携版解压即用、不写注册表。</p>
+          </article>
+          <article class="download-card reveal">
+            <div class="os-badge"><span class="os-glyph mac"></span></div>
+            <h3>macOS</h3>
+            <p class="os-meta">macOS 12+ · Intel / Apple Silicon</p>
+            <div class="dl-links">
+              <a class="dl-btn primary" href="downloads/NEXUS-0.7.1-arm64.zip" download>Apple Silicon .zip <span>↓</span></a>
+              <a class="dl-btn" href="downloads/NEXUS-0.7.1-x64.zip" download>Intel .zip <span>↓</span></a>
+            </div>
+            <p class="dl-note">解压后把 NEXUS.app 拖入「应用程序」；首次打开需在「系统设置 → 隐私与安全性」中允许。</p>
+          </article>
+          <article class="download-card reveal">
+            <div class="os-badge"><span class="os-glyph linux">◉</span></div>
+            <h3>Linux</h3>
+            <p class="os-meta">x86_64 · tar.gz / deb</p>
+            <div class="dl-links">
+              <a class="dl-btn primary" href="downloads/NEXUS-0.7.1-x64-linux.tar.gz" download>tar.gz 免安装 <span>↓</span></a>
+              <a class="dl-btn" href="downloads/NEXUS-0.7.1-x64.deb" download>deb 安装包 <span>↓</span></a>
+            </div>
+            <p class="dl-note">tar.gz 解压后直接运行 <code>./nexus-ai-orchestrator</code>（已带可执行权限）；deb 用 <code>sudo dpkg -i</code> 安装后运行 <code>nexus</code>。</p>
+          </article>
+        </div>
+        <div class="download-fallback reveal">
+          <strong>其他方式</strong> · 也可以直接 <code>npm i -g nexus-ai-orchestrator</code> 安装命令行版，或按<a href="#quickstart">快速开始</a>从源码运行。<br>
+          <strong>功能建议 / 反馈邮箱</strong> · <a href="mailto:tianjinkang0130@sina.com">tianjinkang0130@sina.com</a>（也可以在软件「用户优化中心」里直接投票和提交）
+        </div>
+        <div class="install-safety reveal">
+          <div class="is-head">
+            <span class="kicker">安装包安全</span>
+            <h3>每一个包都不动你的系统关键位置</h3>
+            <p>六个安装包都按最小权限设计，安装与卸载只处理自身文件。</p>
+          </div>
+          <div class="is-grid">
+            <div class="is-item"><strong>不提权、不写系统目录</strong><p>Windows 安装版与便携版均为当前用户级（asInvoker），不请求管理员权限、不写系统盘、不改注册表启动项与系统 PATH；macOS 是标准 .app，拖入「应用程序」即可，没有安装脚本。</p></div>
+            <div class="is-item"><strong>不自启、不捆绑</strong><p>不含计划任务、系统服务、浏览器主页/搜索引擎修改，也不捆绑第三方软件；卸载只移除自身文件，不删除你的数据。</p></div>
+            <div class="is-item"><strong>系统改动可回滚</strong><p>自愈修复只改 dsh 配置，改前必生成时间戳备份；声音开关只作用于当前发声的会话，关闭软件自动恢复，不留静音残留。</p></div>
+            <div class="is-item"><strong>依赖隔离、可自行校验</strong><p>Python 依赖只装进 NEXUS 自己的数据目录，不污染全局环境；构建脚本随源码公开，可逐行核对打包行为。未签名版本首次运行可能触发系统提示，属正常现象。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">核心能力</span>
+          <h2>一个软件，管好你的全部 AI</h2>
+          <p>从发现、对话、协作到自愈，NEXUS 把原本分散在各处的能力串成一条工作流。</p>
+        </div>
+        <div class="feature-grid">
+          <article class="card reveal">
+            <div class="card-icon purple">⌕</div>
+            <h3>自动识别 + 全盘扫描</h3>
+            <p>并发扫描 Ollama、LM Studio、vLLM、llama.cpp、dsh 网关等本地端点；「全盘识别」还能直接读硬盘，找出被环境变量重定向或未被启动的模型，MCP 工具与 AI 模型分开归类，数量随时刷新。</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon teal">✦</div>
+            <h3>统一对话入口</h3>
+            <p>侧栏常驻输入框，自动路由或手动指定通道，逐字流式回复。每个 AI 节点都能说话，离线或空响应会自动桥接回退。</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon purple">◈</div>
+            <h3>深度思考 + 一键停止（v0.7）</h3>
+            <p>打开「深度思考」，模型像 DeepSeek 一样先展开可折叠的思维链再作答，思考过程逐字可见；生成中点「停止」或按 Esc，正文与思考链同时中断，单聊群聊画布都适用。</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon blue">◉</div>
+            <h3>AI 群聊</h3>
+            <p>像微信群一样勾选多位成员、抛出一个问题，系统自动分工处理并逐条呈现发言。支持并行作答、轮流接龙与主持汇总。</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon amber">＋</div>
+            <h3>模型接入中心</h3>
+            <p>手填名称、接口类型、地址、模型清单与密钥，先测试连接再保存。内置 Moonshot、DeepSeek、Ollama、LM Studio、dsh 快速填充。</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon rose">↻</div>
+            <h3>报错即修 · 一键自愈</h3>
+            <p>诊断自定义通道、免费车道、网关与 MCP 路径；可自动修复的问题备份后修复，欠费或密钥失效给出可执行建议，全部可回滚。</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon green">◇</div>
+            <h3>免费模型兜底</h3>
+            <p>零配置或没有本地模型时，内置免密钥公共通道立即可用。自动路由按「本地 → 免费 → 按量计费」排序，需要时可在设置中关闭。</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon indigo">♪</div>
+            <h3>声音控制（v0.5）</h3>
+            <p>设置页实时列出正在发声的程序，一键静音、原样恢复，只改这些程序的静音状态，不动系统音量。刷网页视频时尤其顺手。</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon cyan">⌁</div>
+            <h3>编排画布</h3>
+            <p>输入 / AI / 判断 / 循环 / 汇总五类节点，拖拽连线、缩放平移、属性面板、运行日志与流程落盘，把多 AI 流程真正画出来。</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon pink">♡</div>
+            <h3>用户优化中心</h3>
+            <p>所有人都能参与共建：对功能投票、提交外观样貌与功能建议，一键把结果汇总发送到产品团队邮箱。你的想法直接决定 NEXUS 下一步做什么。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="group">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">AI 群聊</span>
+          <h2>一个问题，多位 AI 一起处理</h2>
+          <p>三种协作模式随时切换，每位成员都复用桥接与空响应回退，谁掉链子都不影响其他人。</p>
+        </div>
+        <div class="mode-grid">
+          <article class="mode-card reveal">
+            <div class="mode-num">01</div>
+            <h3>智能分工 + 汇总</h3>
+            <p>主持 AI 把问题拆成子任务分派给成员，各自处理后由主持人汇总结论。适合复杂分析与方案评估。</p>
+            <div class="mode-flow">提问 <b>→</b> 拆解 <b>→</b> 并行 <b>→</b> 汇总</div>
+          </article>
+          <article class="mode-card reveal">
+            <div class="mode-num">02</div>
+            <h3>全员各自回答</h3>
+            <p>同一问题同时发给所有勾选的成员，并行作答，快速对比不同模型的思路与结论。</p>
+            <div class="mode-flow">提问 <b>→</b> 全员并行 <b>→</b> 并排对比</div>
+          </article>
+          <article class="mode-card reveal">
+            <div class="mode-num">03</div>
+            <h3>轮流接龙讨论</h3>
+            <p>成员依次发言，后面的人能看到前面的观点再补充，形成有上下文的多轮讨论。</p>
+            <div class="mode-flow">提问 <b>→</b> A <b>→</b> B <b>→</b> C 接力</div>
+          </article>
+        </div>
+        <div class="note-strip reveal">
+          <span class="note-icon">✧</span>
+          <div><strong>对话式插件安装</strong> · 在聊天里说一句「安装 sequential thinking 插件」，系统自动识别意图、从 11 款白名单中匹配、备份并写入 MCP 配置，点「重新识别」即可看到新节点。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="repair">
+      <div class="wrap repair-grid">
+        <div class="repair-copy reveal">
+          <span class="kicker">接入与自愈</span>
+          <h2>模型接不进来？<br />让它自己修</h2>
+          <p>通道失效、网关异常、配置写错、余额不足……NEXUS 会先体检，能自动处理的立即处理并备份原文件，处理不了的把原因和下一步讲清楚。</p>
+          <ul class="check-list">
+            <li><span>✓</span> 测试连接后才保存，密钥只显示掩码</li>
+            <li><span>✓</span> 修改配置前生成 .bak 备份，随时回滚</li>
+            <li><span>✓</span> 报错消息下方直接出现「一键修复并查看诊断」</li>
+            <li><span>✓</span> 可选「报错时自动修复」，90 秒内不重复触发</li>
+            <li><span>✓</span> 最近 20 次修复记录可视化留痕</li>
+          </ul>
+        </div>
+        <div class="repair-panel reveal">
+          <div class="panel-head"><span class="panel-dot"></span> 诊断报告 · NEXUS Doctor</div>
+          <div class="diag-row ok"><span class="diag-label">Ollama 网关</span><span class="diag-status">在线 · 3 个模型</span></div>
+          <div class="diag-row ok"><span class="diag-label">WorkBuddy MCP</span><span class="diag-status">11 个工具</span></div>
+          <div class="diag-row warn"><span class="diag-label">Moonshot 通道</span><span class="diag-status">baseURL 已自动修正</span></div>
+          <div class="diag-row fixed"><span class="diag-label">dsh 配置</span><span class="diag-status">已备份 · 修复完成</span></div>
+          <div class="diag-row info"><span class="diag-label">免费兜底</span><span class="diag-status">就绪</span></div>
+          <div class="panel-foot">仅体检模式不修改任何文件 · 所有写操作可回滚</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="quickstart">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">快速开始</span>
+          <h2>两分钟跑起来</h2>
+          <p>纯 Node 模式无需安装任何依赖；也可以直接打包成单文件 exe 分发给没有开发环境的电脑。</p>
+        </div>
+        <div class="code-grid">
+          <div class="code-card reveal">
+            <div class="code-head"><span>方式一 · 纯 Node 运行</span><button class="copy-btn" data-copy="npm run web">复制</button></div>
+            <pre><code>npm run web</code></pre>
+            <p>打开 <code>http://127.0.0.1:8788</code> · 需要 Node.js ≥ 20</p>
+          </div>
+          <div class="code-card reveal">
+            <div class="code-head"><span>方式二 · Electron 桌面窗口</span><button class="copy-btn" data-copy="npm i &amp;&amp; npm start">复制</button></div>
+            <pre><code>npm i
+npm start</code></pre>
+            <p>仅安装 electron 一个依赖</p>
+          </div>
+          <div class="code-card reveal">
+            <div class="code-head"><span>方式三 · 打包单文件 exe</span><button class="copy-btn" data-copy="npm run dist:portable">复制</button></div>
+            <pre><code>npm run dist:portable</code></pre>
+            <p>输出 <code>dist/NEXUS-Portable-0.7.1.exe</code></p>
+          </div>
+        </div>
+        <div class="cta-band reveal">
+          <div>
+            <h3>先体验，再决定要不要接自己的模型</h3>
+            <p>首次启动会自动识别本机环境；如果一台 AI 都没有，免费通道会直接顶上。</p>
+          </div>
+          <a class="btn btn-light" href="#features">看看它能做什么 →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="security">
+      <div class="wrap security-grid">
+        <div class="security-copy reveal">
+          <span class="kicker">安全与隐私</span>
+          <h2>你的密钥，<br />只留在你的电脑</h2>
+          <p>NEXUS 的所有服务只绑定 127.0.0.1，不对外监听。它读取本机已有凭据、不上传、不代管你的账户。</p>
+        </div>
+        <div class="security-list reveal">
+          <div class="sec-item"><span class="sec-icon">⌂</span><div><strong>本机监听</strong><p>服务只绑定 127.0.0.1，局域网与外部网络均不可访问。</p></div></div>
+          <div class="sec-item"><span class="sec-icon">⚿</span><div><strong>不复制云端 Key</strong><p>自动识别的云端通道按需读取原应用凭据位置，不复制、不落盘。</p></div></div>
+          <div class="sec-item"><span class="sec-icon">◈</span><div><strong>手动密钥只存本地</strong><p>写入 %APPDATA%\Nexus\custom-providers.json，界面永远只显示掩码。</p></div></div>
+          <div class="sec-item"><span class="sec-icon">↺</span><div><strong>修复前先备份</strong><p>改写 dsh 配置前生成 .bak 时间戳备份；欠费、密钥失效只给建议。</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap closing-inner reveal">
+        <h2>让电脑里的 AI 真正一起干活</h2>
+        <p>下载、配置、编排、排错，从今天开始少做重复的事。</p>
+        <a class="btn btn-primary btn-lg" href="#quickstart">开始使用 NEXUS</a>
+        <span class="version">NEXUS v0.7.1 · Windows 10 / 11</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="brand footer-brand">
+        <span class="brand-mark">N</span><span class="brand-name">NEXUS</span>
+      </div>
+      <p>本机 AI 工作台 · 所有数据留在你的设备 · 由 <strong>田锦康</strong> 开发</p>
+      <div class="footer-links">
+        <a href="#features">功能</a><a href="#group">群聊</a><a href="#quickstart">开始</a><a href="#security">安全</a>
+      </div>
+      <p class="copyright">© 2026 田锦康 · NEXUS AI 工作台 · 保留所有权利</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

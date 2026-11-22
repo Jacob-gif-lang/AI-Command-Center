@@ -1,0 +1,56 @@
+/* 用户优化中心 · 功能投票 · 邮件反馈 */
+.fb-hero { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 26px 28px; margin-bottom: 26px; border-radius: 16px; background: linear-gradient(115deg, rgba(91,91,214,.12), rgba(0,169,157,.10)); border: 1px solid var(--line); }
+.fb-title { font-size: 26px; margin: 6px 0 8px; }
+.fb-sub { color: var(--muted); max-width: 640px; margin: 0; font-size: 13px; }
+.fb-mail-box { flex-shrink: 0; text-align: right; display: flex; flex-direction: column; gap: 4px; padding: 14px 18px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; }
+.fb-mail-box span { font-size: 11px; color: var(--muted); }
+.fb-mail-box b { font-size: 14px; color: var(--accent); font-family: monospace; }
+
+.idea-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.idea-row { display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; }
+.idea-rank { width: 26px; height: 26px; flex-shrink: 0; display: grid; place-items: center; border-radius: 8px; background: rgba(91,91,214,.12); color: var(--accent); font-size: 12px; font-weight: 700; }
+.idea-main { flex: 1; min-width: 0; }
+.idea-title { font-size: 14px; }
+.idea-tag { margin-left: 8px; font-size: 10px; padding: 1px 7px; border-radius: 99px; background: rgba(0,169,157,.14); color: var(--accent); }
+.idea-cat { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.idea-votes { display: flex; align-items: center; gap: 8px; }
+.vote-count { min-width: 26px; text-align: center; font-size: 15px; }
+.vote-btn { width: 28px; height: 28px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel-2); color: var(--muted); cursor: pointer; font-size: 10px; }
+.vote-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+.fb-inline-form { display: flex; gap: 10px; margin-bottom: 26px; }
+.fb-inline-form input { flex: 1; }
+.fb-inline-form select { width: 120px; }
+input, select, textarea { background: var(--panel-2); border: 1px solid var(--line); color: var(--text); border-radius: 9px; padding: 9px 12px; font: inherit; font-size: 13px; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); }
+
+.fb-form { display: flex; flex-direction: column; gap: 10px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.fb-form-row { display: flex; gap: 10px; }
+.fb-form-row select { width: 140px; }
+.fb-form-row input { flex: 1; }
+.fb-form textarea { resize: vertical; }
+.fb-form-actions { display: flex; justify-content: flex-end; }
+.btn-accent { background: var(--accent); color: #fff; border: none; border-radius: 9px; padding: 9px 16px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.btn-accent:hover { filter: brightness(1.08); }
+.btn-accent:disabled { opacity: .6; cursor: default; }
+
+.suggestion-history { display: flex; flex-direction: column; gap: 6px; margin: 14px 0 26px; }
+.sg-row { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 9px; font-size: 12px; }
+.sg-cat { flex-shrink: 0; font-size: 10px; padding: 2px 8px; border-radius: 99px; background: rgba(91,91,214,.12); color: var(--accent); }
+.sg-cat.appearance { background: rgba(0,169,157,.14); }
+.sg-text { flex: 1; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sg-status { flex-shrink: 0; font-size: 11px; color: var(--muted); }
+.fb-empty { padding: 18px; text-align: center; color: var(--muted); font-size: 12px; border: 1px dashed var(--line); border-radius: 10px; }
+
+.fb-send-bar { display: flex; align-items: center; gap: 12px; padding: 18px 20px; border-radius: 14px; background: linear-gradient(115deg, rgba(91,91,214,.10), rgba(0,169,157,.08)); border: 1px solid var(--line); }
+.fb-send-note { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.fb-send-note b { font-size: 14px; }
+.fb-send-note span { font-size: 11px; color: var(--muted); }
+
+@media (max-width: 720px) {
+  .fb-hero { flex-direction: column; align-items: flex-start; }
+  .fb-mail-box { text-align: left; }
+  .fb-inline-form { flex-wrap: wrap; }
+  .fb-inline-form input { flex: 1 1 100%; }
+  .fb-send-bar { flex-wrap: wrap; }
+}

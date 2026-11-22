@@ -1,0 +1,102 @@
+{
+  "name": "nexus-ai-orchestrator",
+  "version": "0.7.1",
+  "description": "NEXUS — Windows 本机 AI 编排中枢（桌面初版）",
+  "homepage": "https://nexus-official.app.workbuddy.host/?sharecode=HDR676KA2G",
+  "main": "electron/main.js",
+  "bin": {
+    "nexus": "bin/nexus.js"
+  },
+  "files": [
+    "bin/",
+    "server/",
+    "renderer/",
+    "electron/",
+    "docs/",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "web": "node server/index.js",
+    "check": "node server/selftest.js",
+    "dist": "electron-builder --win --x64",
+    "dist:portable": "electron-builder --win portable --x64",
+    "dist:win": "electron-builder --win nsis --x64 --config.npmRebuild=false --config.electronDist=node_modules/electron/dist",
+    "dist:linux": "electron-builder --linux AppImage deb --x64 --config.npmRebuild=false --config.electronDist=node_modules/electron/dist",
+    "dist:mac": "electron-builder --mac zip --x64 --config.npmRebuild=false --config.electronDist=node_modules/electron/dist",
+    "dist:all": "npm run dist:win && npm run dist:linux && npm run dist:mac"
+  },
+  "keywords": [
+    "ai",
+    "orchestrator",
+    "windows",
+    "ollama",
+    "mcp",
+    "desktop"
+  ],
+  "author": "Jacob",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "com.jacob.nexus",
+    "productName": "NEXUS",
+    "copyright": "Copyright © 2026 Jacob",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "electron/**",
+      "server/**",
+      "renderer/**",
+      "docs/**",
+      "package.json"
+    ],
+    "asar": true,
+    "compression": "normal",
+    "win": {
+      "target": [
+        { "target": "portable", "arch": ["x64"] },
+        { "target": "nsis", "arch": ["x64"] }
+      ],
+      "icon": "build/icon.ico",
+      "artifactName": "${productName}-${version}-${arch}.${ext}",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "mac": {
+      "target": [
+        { "target": "zip", "arch": ["x64", "arm64"] }
+      ],
+      "icon": "build/icon.png",
+      "artifactName": "${productName}-${version}-${arch}.${ext}",
+      "identity": null
+    },
+    "linux": {
+      "target": [
+        { "target": "AppImage", "arch": ["x64"] },
+        { "target": "deb", "arch": ["x64"] }
+      ],
+      "icon": "build/icon.png",
+      "artifactName": "${productName}-${version}-${arch}.${ext}",
+      "category": "Utility"
+    },
+    "portable": {
+      "artifactName": "NEXUS-Portable-${version}.exe",
+      "requestExecutionLevel": "user"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "NEXUS"
+    }
+  }
+}

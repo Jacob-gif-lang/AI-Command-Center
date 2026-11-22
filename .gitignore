@@ -1,0 +1,46 @@
+# ===== Git 元数据 =====
+# nexus 内嵌的旧仓库历史（改名备份为 .git.local-backup，随时可改回）
+**/.git/
+**/.git.local-backup/
+.git
+
+# ===== 依赖目录 =====
+node_modules/
+**/node_modules/
+
+# ===== 构建 / 打包产物（体积巨大且可重新生成）=====
+dist/
+**/dist/
+build/mac/stage-*/
+build/mac/electron-darwin-*.zip
+out/
+**/out/
+*.exe
+*.deb
+*.rpm
+*.dmg
+*.AppImage
+*.tar.gz
+*.zip
+*.7z
+*.tgz
+
+# ===== 官网安装包（单文件超 GitHub 100MB 限制，改由官网分发）=====
+nexus-website/downloads/
+
+# ===== WorkBuddy / 编辑器元数据 =====
+.workbuddy/
+**/.workbuddy/
+*.genie
+.vscode/
+.idea/
+
+# ===== 日志 / 缓存 / 临时 / 环境 =====
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.env
+.env.*
+audio-state.json
+*.tmp
