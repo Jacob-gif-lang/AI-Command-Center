@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "latest": "0.7.2",
+  "releasedAt": "2026-11-22T08:53:20.962Z",
+  "channel": "stable",
+  "notes": [
+    "用户优化中心全面升级：四类反馈分类、投票防重复、反馈自带版本与环境信息、草稿自动保存",
+    "全界面中英一键切换，动态内容与输入框提示语同步翻译",
+    "软件内「检查更新」一键下载对应平台安装包，带 SHA256 校验",
+    "全盘识别本机模型、DeepSeek 式深度思考、一键停止输出与思考",
+    "MCP 工具与 AI 模型分区展示，不再把工具算作模型"
+  ],
+  "packages": {
+    "windows-x64": {
+      "file": "NEXUS-0.7.2-x64.exe",
+      "size": 87728223,
+      "sha256": "60abaf2ff45caa8f3bd1f8d88fced7675508f7cfcb0ca4bbca113873bb96c28d",
+      "kind": "nsis",
+      "url": "https://github.com/Jacob-gif-lang/AI-Command-Center/releases/download/v0.7.2/NEXUS-0.7.2-x64.exe"
+    },
+    "windows-x64-portable": {
+      "file": "NEXUS-Portable-0.7.2.exe",
+      "size": 80456837,
+      "sha256": "38ecf60fadabaee8a0a4736ee068aae2c34754077b8f261c124a23a5715b7b4c",
+      "kind": "portable",
+      "url": "https://github.com/Jacob-gif-lang/AI-Command-Center/releases/download/v0.7.2/NEXUS-Portable-0.7.2.exe"
+    },
+    "macos-x64": {
+      "file": "NEXUS-0.7.2-x64.zip",
+      "size": 103302403,
+      "sha256": "18c61b7c2dba8074786370dbfcd95b0117cd8b04ac58b26e4ec8aa5a00150f4f",
+      "kind": "zip",
+      "url": "https://github.com/Jacob-gif-lang/AI-Command-Center/releases/download/v0.7.2/NEXUS-0.7.2-x64.zip"
+    },
+    "macos-arm64": {
+      "file": "NEXUS-0.7.2-arm64.zip",
+      "size": 98577605,
+      "sha256": "38f9ca1ff0e8c3098f0cbc9a60e8774f05fcabd5a07d92c2b8de46576100b0af",
+      "kind": "zip",
+      "url": "https://github.com/Jacob-gif-lang/AI-Command-Center/releases/download/v0.7.2/NEXUS-0.7.2-arm64.zip"
+    },
+    "linux-x64": {
+      "file": "NEXUS-0.7.2-x64.deb",
+      "size": 108365792,
+      "sha256": "83bbf100a6fa62c1207a87c52b412a450ab07d484ddb4e5a1e8d07e924566073",
+      "kind": "deb",
+      "url": "https://github.com/Jacob-gif-lang/AI-Command-Center/releases/download/v0.7.2/NEXUS-0.7.2-x64.deb"
+    },
+    "linux-x64-targz": {
+      "file": "NEXUS-0.7.2-x64-linux.tar.gz",
+      "size": 108361612,
+      "sha256": "8fe50041c897d53f080408f3f06f949bd289fcb1130a4ed5ae8c4eacd69c405b",
+      "kind": "targz",
+      "url": "https://github.com/Jacob-gif-lang/AI-Command-Center/releases/download/v0.7.2/NEXUS-0.7.2-x64-linux.tar.gz"
+    }
+  }
+}
