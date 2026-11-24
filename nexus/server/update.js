@@ -18,7 +18,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
 
-const DEFAULT_FEED = 'https://ai-command-center.tianjinkang0130.workers.dev/version.json';
+const DEFAULT_FEED = 'https://jacob-gif-lang.github.io/AI-Command-Center/version.json';
 const CACHE_MS = 10 * 60 * 1000;
 const FETCH_TIMEOUT_MS = 12000;
 const DOWNLOAD_TIMEOUT_MS = 10 * 60 * 1000;
@@ -93,11 +93,15 @@ function normalizeManifest(data) {
     if (!value || typeof value.file !== 'string' || !ALLOWED_FILE.test(value.file)) continue;
     const size = Number(value.size) || 0;
     if (size > MAX_PACKAGE_BYTES) continue;
+    // 清单可为每个包指定绝对下载地址（如 GitHub Releases）；必须是 HTTPS，且文件名仍走白名单
+    let assetUrl = null;
+    if (typeof value.url === 'string' && /^https:\/\//i.test(value.url)) assetUrl = value.url;
     packages[key] = {
       file: value.file,
       size,
       sha256: String(value.sha256 || '').toLowerCase(),
-      kind: String(value.kind || 'installer')
+      kind: String(value.kind || 'installer'),
+      url: assetUrl
     };
   }
   if (!Object.keys(packages).length) throw new Error('更新清单中没有可用安装包');
@@ -149,11 +153,13 @@ function buildResult(data, currentVersion, platform, arch, loc) {
     arch: arch || process.arch,
     package: pkg,
     feed: loc.url,
-    downloadUrl: pkg ? `${loc.origin}/downloads/${encodeURIComponent(pkg.file)}${loc.share}` : null
+    downloadUrl: pkg ? assetUrl(pkg, loc) : null
   };
 }
 
 function assetUrl(pkg, loc) {
+  // 优先使用清单中为每个包指定的绝对地址（GitHub Releases），否则回退到源站 /downloads/
+  if (pkg && typeof pkg.url === 'string' && /^https:\/\//i.test(pkg.url)) return pkg.url;
   return `${loc.origin}/downloads/${encodeURIComponent(pkg.file)}${loc.share}`;
 }
 

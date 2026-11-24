@@ -50,3 +50,5 @@ audio-state.json
 nexus/build/asarsrc-*/
 nexus/build/make-asar-v072.js
 nexus/build/notes-v072.txt
+upload_*.json
+upload_release.sh

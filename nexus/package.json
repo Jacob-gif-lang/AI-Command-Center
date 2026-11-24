@@ -2,7 +2,7 @@
   "name": "nexus-ai-orchestrator",
   "version": "0.7.2",
   "description": "NEXUS — Windows 本机 AI 编排中枢（桌面初版）",
-  "homepage": "https://ai-command-center.tianjinkang0130.workers.dev/",
+  "homepage": "https://jacob-gif-lang.github.io/AI-Command-Center/",
   "main": "electron/main.js",
   "bin": {
     "nexus": "bin/nexus.js"
